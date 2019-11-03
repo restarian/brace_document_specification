@@ -1,7 +1,5 @@
 ## Synopsis
 
-[![Build status](https://ci.appveyor.com/api/projects/status/bdfpmn5gt2ffj626/branch/master?svg=true)](https://ci.appveyor.com/project/restarian/brace-document/branch/master) [![Build Status](https://travis-ci.org/restarian/brace_document.svg?branch=master)](https://travis-ci.org/restarian/brace_document) [![Downloads](https://img.shields.io/npm/dm/brace_document.svg?svg=true)](https://npmjs.org/package/brace_document)
-
 | **The [Brace Suite]** | **[Ubuntu on Windows]**   |
 |:---------------------:|:-------------------------:|
 | ![Brace logo]         | ![Ubuntu on Windows logo] |         |
@@ -16,9 +14,9 @@
 ### Brace Document Specification help pages
 * **Synopsis**
 * Specification
-  * [License information](https://github.com/restarian/batten_document_specification/blob/master/docs/specification/license_information.md)
-  * [Package information](https://github.com/restarian/batten_document_specification/blob/master/docs/specification/package_information.md)
-  * [Package information](https://github.com/restarian/batten_document_specification/blob/master/docs/specification/package_information.md)
-  * [Unit test output](https://github.com/restarian/batten_document_specification/blob/master/docs/specification/unit_test_output.md)
+  * [License information](https://github.com/restarian/brace_document_specification/blob/master/docs/specification/license_information.md)
+  * [Package information](https://github.com/restarian/brace_document_specification/blob/master/docs/specification/package_information.md)
+  * [Package information](https://github.com/restarian/brace_document_specification/blob/master/docs/specification/package_information.md)
+  * [Unit test output](https://github.com/restarian/brace_document_specification/blob/master/docs/specification/unit_test_output.md)
 
 ---
