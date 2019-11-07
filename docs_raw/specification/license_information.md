@@ -1,11 +1,12 @@
-# Brace Suite
-## Restarian Technology
+# Brace Document Specification
+## License information by Restarian Technology
 
 ----
 ### Document pages
+
 ----
 
-#### Brace Specification Document is included in the Brace Suite.
+#### Brace Document Specification is included in the Brace Suite.
 
 All works, media and writings contained within this project are licensed the same as Brace Document Specification license unless it is explicitly specified otherwise.
 
@@ -16,9 +17,6 @@ A project which is labeled with the Brace Suite is open-sourced under the **MIT*
 ___
 
 **Author**: Robert Steckroth, *Bust0ut* [<RobertSteckroth@gmail.com>](mailto:robertsteckroth@gmail.com)
-
-**Bonuses:**
-* Open-sourced under a liberal licensed
 
 ![Brace](https://raw.githubusercontent.com/restarian/restarian/master/brace/doc/image/brace_logo_medium.png)
 

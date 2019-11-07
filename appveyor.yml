@@ -1,0 +1,52 @@
+version: 1.0.{build}
+clone_depth: 1
+notifications:
+- provider: Email
+  to:
+  - robertsteckroth@gmail.com
+  subject: A Brace Document Specification build has failed.
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: false
+environment:
+  matrix:
+    - nodejs_version: 6
+      appveyor_build_worker_image: Visual Studio 2015
+    - nodejs_version: 9
+      appveyor_build_worker_image: Visual Studio 2015
+    - nodejs_version: 10
+      appveyor_build_worker_image: Visual Studio 2015
+    - nodejs_version: 11
+      appveyor_build_worker_image: Visual Studio 2015
+    - nodejs_version: 12
+      appveyor_build_worker_image: Visual Studio 2015
+    - nodejs_version: 6
+      appveyor_build_worker_image: Ubuntu
+    - nodejs_version: 9
+      appveyor_build_worker_image: Ubuntu
+    - nodejs_version: 10
+      appveyor_build_worker_image: Ubuntu
+    - nodejs_version: 11
+      appveyor_build_worker_image: Ubuntu
+    - nodejs_version: 12
+      appveyor_build_worker_image: Ubuntu
+install:
+  - npm install
+  - npm install brace_document
+build: off
+test_script:
+  - node --version && npm --version
+  - npm test
+matrix:
+  fast_finish: false
+for:
+-
+  matrix:
+    only:
+      - appveyor_build_worker_image: Ubuntu
+  clone_folder: /home/appveyor/brace_document_specification
+-
+  matrix:
+    only:
+      - appveyor_build_worker_image: Visual Studio 2015
+  clone_folder: C:\projects\brace_document_specification

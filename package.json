@@ -2,13 +2,14 @@
 	"name": "brace_document_specification",
 	"version": "1.1.2",
 	"priority": "1",
+	"tense": "collect",
 	"description": "A plugin for Brace Document which generates data from the project source code and package.json file.",
 	"main": "lib/brace_document_specification.js",
 	"bin": {},
 	"scripts": {
 		"test": "mocha",
-		"make_docs": "brace_document -i docs_raw -b docs --navlink -r --specification --link --link-dest README.md --link-path docs/synopsis.md --force-title --title \"Brace Document Specification help pages\" --sort depth",
-		"make_docs_extra": "npm run make_docs -- --mocha"
+		"make_docs": "brace_document -i docs_raw -b docs --navlink -r --link --link-dest ../Readme.md --link-path synopsis.md --force-title --title \"Brace Document Specification help pages\" --sort depth",
+		"make_docs_extra": "npm run make_docs -- --specification --mocha"
 	},
 	"repository": {
 		"type": "git",

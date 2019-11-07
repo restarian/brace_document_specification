@@ -1,4 +1,7 @@
+# Brace Document Specification
 ## Synopsis
+
+[![Build status](https://ci.appveyor.com/api/projects/status/6x7kahkrdntaxyqa?svg=true)](https://ci.appveyor.com/project/restarian/brace-document-specification)[![Downloads](https://img.shields.io/npm/dm/brace_document_specification.svg?svg=true)](https://npmjs.org/package/brace_document_specification)
 
 | **The [Brace Suite]** | **[Ubuntu on Windows]**   |
 |:---------------------:|:-------------------------:|
