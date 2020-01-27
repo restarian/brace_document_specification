@@ -2,7 +2,14 @@
 ## Making a difference with Brace Document Specification 
 
 ---
-### Document pages
+### Brace Document Specification help pages
+* [Contributor code of conduct](https://github.com/restarian/brace_document_specification/blob/master/docs/contributor_code_of_conduct.md)
+* **Guidelines for contributing**
+* [Synopsis](https://github.com/restarian/brace_document_specification/blob/master/docs/synopsis.md)
+* Specification
+  * [License information](https://github.com/restarian/brace_document_specification/blob/master/docs/specification/license_information.md)
+  * [Package information](https://github.com/restarian/brace_document_specification/blob/master/docs/specification/package_information.md)
+  * [Unit test output](https://github.com/restarian/brace_document_specification/blob/master/docs/specification/unit_test_output.md)
 
 ---
 

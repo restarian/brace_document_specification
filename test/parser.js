@@ -25,38 +25,46 @@ describe("Using stop further progression methodology for dependencies in: "+path
 			it_will.stop = false 
 			done()
 		})
-
-		it("brace_document is in the system as a program", function(done) {
+		it("the brace_document module is install on the system", function(done) {
 			it_will.stop = true 
-			expect((function() {try { require("brace_document"); return true; } catch(e) { return e;}})(), "unable to find the brace_document module").to.be.true
+			expect((function() {try { require("brace_document"); return true }catch(e) { return !!console.log(e) }})(), "unable to find the brace_document module").to.be.true
 			it_will.stop = false 
 			done()
 		})
-
 	})
 
 	describe("is able to aquire the package.json data from the api", function(done) {
 
-		var cwd = path.join(__dirname, "example"), requirejs, meta
-		beforeEach(function() {
+		var requirejs, parser, opt
+		beforeEach(function(done) {
+			parser = null
 			cache.start()
+			opt = { 
+				pluginRegex: "^brace_document_specification$", 
+				pluginPath: __dirname,
+				//input: path.join("test", "example") 
+				projectLocation: path.join(__dirname, "example", "cooljoes") 
+			}
 			requirejs = require("requirejs")
 			requirejs.config({baseUrl: path.join(__dirname, "..", "lib"), nodeRequire: require})
-			meta = {package: require(path.join(__dirname, "..", "package.json"))}
+			done()
 		})
 		afterEach(cache.dump.bind(cache))
 
-		it("checking the acquireOutput API member using the entry script as the entry point", function(done) {
-			
-			requirejs(["./package_parser"], function(parser) {
+		var err_cb = function(error) { expect(false, error).to.be.true; done() }
 
-				parser(function() {
-					this.acquireContent(meta, function(content) {
-						expect(content).to.include("# "+meta.package.name)
-						done()	
-					}, function(error) { expect(true, error).to.be.false; done() })
-				}, function(error) { expect(true, error).to.be.false; done() })
-			})
+		it(".............", function(done) {
+			
+			requirejs(["brace_document"], function(document_parse) { 
+				parser = document_parse(opt, function() {
+
+					console.log(this.parser.plugin.collect)
+					//expect(this.plugin.collect."The plugin should have errored.").to.be.true
+					done()
+				}, function(msg, a, b) {
+					done()
+				})
+			}, err_cb)
 		})
 
 	})
