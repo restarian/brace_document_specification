@@ -25,7 +25,7 @@ describe("Using stop further progression methodology for dependencies in: "+path
 			it_will.stop = false 
 			done()
 		})
-		it("the brace_document module is install on the system", function(done) {
+		it("the brace_document module is installed as a module", function(done) {
 			it_will.stop = true 
 			expect((function() {try { require("brace_document"); return true }catch(e) { return !!console.log(e) }})(), "unable to find the brace_document module").to.be.true
 			it_will.stop = false 
@@ -46,7 +46,12 @@ describe("Using stop further progression methodology for dependencies in: "+path
 				projectLocation: path.join(__dirname, "example", "cooljoes") 
 			}
 			requirejs = require("requirejs")
-			requirejs.config({baseUrl: path.join(__dirname, "..", "lib"), nodeRequire: require})
+			requirejs.config({baseUrl: "..",//path.normalize(path.join(__dirname, "..")),
+				nodeRequire: require,
+				paths: {
+					"brace_document": path.join("node_modules", "brace_document", "lib", "brace_document"),
+				},
+			})
 			done()
 		})
 		afterEach(cache.dump.bind(cache))
@@ -55,10 +60,10 @@ describe("Using stop further progression methodology for dependencies in: "+path
 
 		it(".............", function(done) {
 			
-			requirejs(["brace_document"], function(document_parse) { 
+			requirejs(["brace_document", "brace_document_specification"], function(document_parse, specification_parser) { 
 				parser = document_parse(opt, function() {
 
-					console.log(this.parser.plugin.collect)
+					//console.log(this)
 					//expect(this.plugin.collect."The plugin should have errored.").to.be.true
 					done()
 				}, function(msg, a, b) {
