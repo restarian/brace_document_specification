@@ -1,6 +1,6 @@
 {
 	"name": "brace_document_specification",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"priority": "1",
 	"tense": "collect",
 	"description": "A plugin for Brace Document which generates data from the project source code and package.json file.",
