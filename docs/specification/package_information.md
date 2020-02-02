@@ -13,23 +13,24 @@
   * [Unit test output](https://github.com/restarian/brace_document_specification/blob/master/docs/specification/unit_test_output.md)
 ----
 
-**Version**: 1.1.3
+**Version**: 1.2.2
 
 **Description**: A plugin for Brace Document which generates data from the project source code and package.json file.
 
 **Author**: [Robert Steckroth](mailto:RobertSteckroth@gmail.com)
 
-**Dependencies**: [amdefine](https://npmjs.org/package/amdefine) [bracket_print](https://npmjs.org/package/bracket_print)
+**Dependencies**: [bracket_print](https://npmjs.org/package/bracket_print)
 
-**Development dependencies**: [mocha](https://npmjs.org/package/mocha) [chai](https://npmjs.org/package/chai) [brace_maybe](https://npmjs.org/package/brace_maybe) [bracket_utils](https://npmjs.org/package/bracket_utils) [requirejs](https://npmjs.org/package/requirejs)
+**Development dependencies**: [amdefine](https://npmjs.org/package/amdefine) [brace_maybe](https://npmjs.org/package/brace_maybe) [bracket_utils](https://npmjs.org/package/bracket_utils) [chai](https://npmjs.org/package/chai) [mocha](https://npmjs.org/package/mocha) [requirejs](https://npmjs.org/package/requirejs)
+
+**Optional Dependencies**: [brace_document](https://npmjs.org/package/brace_document) [brace_document_link](https://npmjs.org/package/brace_document_link) [brace_document_mocha](https://npmjs.org/package/brace_document_mocha) [brace_document_navlink](https://npmjs.org/package/brace_document_navlink)
 
 **Package scripts**:
 
 | Name | Action |
 | ---- | ------ |
  | test | ```mocha``` |
- | make_docs | ```brace_document -i docs_raw -b docs --navlink -r --link --link-dest ../Readme.md --link-path synopsis.md --force-title --title "Brace Document Specification help pages" --sort depth``` |
- | make_docs_extra | ```npm run make_docs -- --specification --mocha``` |
+ | make_docs | ```brace_document -i docs_raw -b docs --navlink -r --link --link-dest ../Readme.md --link-path ../docs/synopsis.md --force-title --title "Brace Document Specification help pages" --sort depth --specification --mocha``` |
 
 **Technologies used in development**:
   * [VIM](https://www.vim.org) As the primary IDE

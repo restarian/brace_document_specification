@@ -8,8 +8,7 @@
 	"bin": {},
 	"scripts": {
 		"test": "mocha",
-		"make_docs": "brace_document -i docs_raw -b docs --navlink -r --link --link-dest ../Readme.md --link-path synopsis.md --force-title --title \"Brace Document Specification help pages\" --sort depth",
-		"make_docs_extra": "npm run make_docs -- --specification --mocha"
+		"make_docs": "brace_document -i docs_raw -b docs --navlink -r --link --link-dest ../Readme.md --link-path ../docs/synopsis.md --force-title --title \"Brace Document Specification help pages\" --sort depth --specification --mocha"
 	},
 	"repository": {
 		"type": "git",
@@ -25,15 +24,21 @@
 	},
 	"homepage": "https://github.com/restarian/brace_document_specification#readme",
 	"dependencies": {
-		"amdefine": "^1.0.1",
-		"bracket_print": "^0.10.0"
+		"bracket_print": "^0.10.4"
 	},
 	"devDependencies": {
-		"mocha": "^5.2.0",
-		"chai": "^4.1.2",
+		"amdefine": "^1.0.1",
 		"brace_maybe": "^0.1.4",
 		"bracket_utils": "^0.3.0",
+		"chai": "^4.2.0",
+		"mocha": "^7.0.1",
 		"requirejs": "^2.3.6"
+	},
+	"optionalDependencies": {
+		"brace_document": "^1.1.10",
+		"brace_document_link": "^1.1.10",
+		"brace_document_mocha": "^1.1.0",
+		"brace_document_navlink": "^1.1.9"
 	},
 	"technologies": [
 		{

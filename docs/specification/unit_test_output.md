@@ -15,17 +15,11 @@
 ### ---------- Start of unit testing ----------
 
   * Using stop further progression methodology for dependencies in: parser.js
-
     * Checking for dependencies..
-
       * √ requirejs is in the system as a program
-
-      * √ the brace_document module is install on the system
-
+      * √ the brace_document module is installed as a module
     * is able to aquire the package.json data from the api
-
       * √ .............
-
 
   * 3 passing
 
